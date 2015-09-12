@@ -67,7 +67,11 @@ include('select_question.php');
              <div class="card-heading-header">
                 <h3>{{card_title}}</h3>
                 <span>Published - {{date | date}}</span>
+                <div class="ballon" ng-repeat="x in names">
+                  {{x.TM_QID}}
+               </div>
              </div>
+
              </div>
          <div class="card-body">
            <table class="table">
@@ -78,9 +82,9 @@ include('select_question.php');
                </tr>
              </thead>
              <tbody id="select">
-               <tr class="test">
-                 <td><?php echo $en; ?></td>
-                 <td><?php echo $gr; ?></td>
+               <tr ng-repeat="x in names" class="test">
+                 <td>{{ x.TM_ENG }}</td>
+                 <td>{{ x.TM_GR }}</td>
                </tr>
 
              </tbody>

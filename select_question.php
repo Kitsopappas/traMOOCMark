@@ -13,6 +13,7 @@ $numrows = mysql_num_rows($query);
 
 if($numrows!=0){
   while($row=mysql_fetch_assoc($query)){
+    $id = $row['TM_QID'];
     $gr = $row['TM_GR'];
     $en = $row['TM_ENG'];
   }

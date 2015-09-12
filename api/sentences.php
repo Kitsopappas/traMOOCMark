@@ -19,5 +19,7 @@ $query = "SELECT * FROM QUESTIONS WHERE TM_QID = '". $num ."'";
               $rows[] = $row;
 
 				}
+        echo '{ "records":';
         print json_encode($rows);
+        echo '}';
 ?>
